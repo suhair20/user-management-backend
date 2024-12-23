@@ -19,8 +19,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-  origin: 'https://user-management-by5v.vercel.app/', // Replace with your frontend URL
-  credentials: true,
+  origin: 'https://user-management-by5v.vercel.app', // Add your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+  credentials: true, // Include credentials if needed
 }));
 
 // Routes
